@@ -35,12 +35,12 @@ function App() {
   async function login() {
     if (!sdkRef.current) {
       const socialLoginSdk = new SocialLogin();
-      const signature1 = await socialLoginSdk.whitelistUrl('http://192.168.66.203:5173/');
+      const signature1 = await socialLoginSdk.whitelistUrl('http://192.168.66.203:5173': signature1,');
       await socialLoginSdk.init({
         chainId: ethers.utils.hexValue(ChainId.POLYGON_MUMBAI).toString(),
         network: "testnet",
         whitelistUrls: {
-          'http://192.168.66.203:5173/': signature1,
+       'http://192.168.66.203:5173': signature1,
         }
       })
       sdkRef.current = socialLoginSdk
